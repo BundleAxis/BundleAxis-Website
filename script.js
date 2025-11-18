@@ -3,7 +3,7 @@ const lines = [
   "> loading modules...",
   "> loading UI...",
   "> initializing BundleAxis...",
-  "> system ready ✔",
+  "> system ready",
   "",
 ];
 
