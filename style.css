@@ -86,7 +86,7 @@ h2 {
 
 }
 
-#intro {
+#terminal-intro {
   position: fixed;
   top: 0;
   left: 0;
@@ -102,7 +102,7 @@ h2 {
   transition: opacity 0.5s ease;
 }
 
-#intro-text {
+#terminal-text {
   font-size: 1.1rem;
   white-space: pre-wrap;
 }
