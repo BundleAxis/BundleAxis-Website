@@ -114,3 +114,67 @@ h2 {
   font-size: 1.1rem;
   white-space: pre-wrap;
 }
+
+/*MUSIC BOX UPGRADE*/
+
+.music-box {
+  display: flex;
+  gap: 1rem;
+  background: rgba(20, 20, 20, 0.8);
+  padding: 1rem;
+  border-radius: 10px;
+  align-items: center;
+  backdrop-filter: blur(4px);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.music-box:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(0, 255, 140, 0.3);
+}
+
+.album-cover {
+  width: 64px;
+  height: 64px;
+  border-radius: 6px;
+  object-fit: cover;
+  background: #222;
+}
+
+.music-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.now-playing {
+  margin-bottom: 6px;
+}
+
+/*Equalizer Animation*/
+.equalizer {
+  display: flex;
+  gap: 4px;
+  height: 20px;
+  align-items: flex-end;
+}
+
+.equalizer div {
+  width: 4px;
+  background: #00ff9d;
+  animation: bounce 0.6s infinite ease-in-out;
+  border-radius: 2px;
+}
+
+/*difference for height & Delays and dynamik Look*/
+.equalizer div:nth-child(1) { animation-delay: 0s; height: 6px; }
+.equalizer div:nth-child(2) { animation-delay: 0.1s; height: 10px; }
+.equalizer div:nth-child(3) { animation-delay: 0.2s; height: 14px; }
+.equalizer div:nth-child(4) { animation-delay: 0.15s; height: 9px; }
+.equalizer div:nth-child(5) { animation-delay: 0.05s; height: 12px; }
+
+@keyframes bounce {
+  0% { transform: scaleY(1); }
+  50% { transform: scaleY(2); }
+  100% { transform: scaleY(1); }
+}
