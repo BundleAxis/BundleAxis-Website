@@ -161,7 +161,7 @@ h2 {
 
 .equalizer div {
   width: 4px;
-  background: #00ff9d;
+  background: #9d00ff;
   animation: bounce 0.6s infinite ease-in-out;
   border-radius: 2px;
 }
