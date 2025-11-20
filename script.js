@@ -3,10 +3,10 @@ const lines = [
   "> loading modules...",
   "> loading UI...",
   "> initializing BundleAxis...",
-  "> system ready...",
-  "> connecting to the wired",
+  "> system ready",
+  "> connecting to the wired...",
   "> ...",
-  "",
+  "> connection successful",
 ];
 
 let text = "";
