@@ -13,7 +13,7 @@ async function loadCurrentSong() {
   const cover = document.querySelector(".album-cover");
 
   if (!track) {
-    infoText.textContent = "🎵 Nothing playing!";
+    infoText.textContent = "Nothing playing!";
     cover.src = "";
     return;
   }
@@ -27,11 +27,11 @@ async function loadCurrentSong() {
 
   if (isPlaying) {
     infoText.innerHTML =
-      `🎵 Now playing: <strong>${trackName}</strong> by <strong>${artist}</strong>`;
+      `Now playing: <strong>${trackName}</strong> by <strong>${artist}</strong>`;
     cover.src = albumImg || "fallback.png";
     musicBox.classList.add("playing");
   } else {
-    infoText.textContent = "🎵 Nothing playing right now ;3";
+    infoText.textContent = "Nothing playing right now ;3";
     cover.src = "";
     musicBox.classList.remove("playing");
   }
