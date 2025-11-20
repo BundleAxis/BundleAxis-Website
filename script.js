@@ -5,7 +5,8 @@ const lines = [
   "> initializing BundleAxis...",
   "> system ready...",
   "> connecting to the wired",
-  "",
+  "> ...",
+  " ",
 ];
 
 let text = "";
