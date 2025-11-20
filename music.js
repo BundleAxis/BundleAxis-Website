@@ -2,7 +2,7 @@ const apiKey = "9433b9f2a8077343edb60cc12b908e52";
 const username = "BundleAxis";
 
 async function loadCurrentSong() {
-  const url = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${username}&api_key=${apiKey}&format=json&limit=1&extended=1&format=json`;
+  const url = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${username}&api_key=${apiKey}&limit=1&format=json`;
 
   const response = await fetch(url);
   const data = await response.json();
@@ -19,7 +19,7 @@ async function loadCurrentSong() {
   }
 
   const trackName = track.name;
-  const artist = track.artist.name;
+  const artist = track.artist["#text"];
   const albumImg =
     track.image && track.image[2] ? track.image[2]["#text"] : "";
 
