@@ -6,7 +6,7 @@ const lines = [
   "> system ready...",
   "> connecting to the wired",
   "> ...",
-  " ",
+  "",
 ];
 
 let text = "";
