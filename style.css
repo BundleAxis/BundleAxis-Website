@@ -130,7 +130,7 @@ h2 {
 
 .music-box:hover {
   transform: scale(1.02);
-  box-shadow: 0 0 20px rgba(0, 255, 140, 0.3);
+  box-shadow: 0 0 20px rgba(251, 0, 255, 0.3);
 }
 
 .album-cover {
