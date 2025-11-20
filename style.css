@@ -178,3 +178,57 @@ h2 {
   50% { transform: scaleY(2); }
   100% { transform: scaleY(1); }
 }
+
+.now-playing-container {
+  overflow: hidden;        /* Alles außerhalb verstecken */
+  width: 100%;             /* Container-Breite */
+  white-space: nowrap;     /* Alles in einer Zeile */
+  position: relative;
+}
+
+.now-playing {
+  display: inline-block;
+  padding-left: 100%;      /* Start rechts außerhalb */
+  animation: slide 10s linear infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.music-box {
+  display: flex;               /* Inhalt nebeneinander */
+  align-items: flex-start;     /* Alles oben ausrichten */
+  gap: 1rem;
+  background: rgba(20,20,20,0.8);
+  padding: 1rem;
+  border-radius: 10px;
+  backdrop-filter: blur(4px);
+}
+
+.album-cover {
+  width: 64px;
+  height: 64px;
+  border-radius: 6px;
+  object-fit: cover;
+  background: #222;
+  flex-shrink: 0;
+}
+
+.music-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Text oben */
+}
+
+.now-playing {
+  margin: 0 0 0.3rem 0;   /* etwas Abstand nach unten */
+  font-size: 0.9rem;
+  color: #fff;
+  font-weight: 600;
+}

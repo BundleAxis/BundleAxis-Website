@@ -14,31 +14,32 @@ async function loadCurrentSong() {
 
   if (!track) {
     infoText.textContent = "Nothing playing!";
-    cover.src = "";
+    cover.src = "fallback.png";
+    musicBox.classList.remove("playing");
     return;
   }
 
   const trackName = track.name;
   const artist = track.artist["#text"];
   const albumImg =
-    track.image && track.image[2] ? track.image[2]["#text"] : "";
+    track.image?.[3]?.["#text"] ||
+    track.image?.[2]?.["#text"] ||
+    "fallback.png";
 
   const isPlaying = track["@attr"]?.nowplaying === "true";
 
-  if (isPlaying) {
-    infoText.innerHTML =
-      `Now playing: <strong>${trackName}</strong> by <strong>${artist}</strong>`;
-    cover.src = albumImg || "fallback.png";
-    musicBox.classList.add("playing");
-  } else {
-    infoText.textContent = "Nothing playing right now ;3";
-    cover.src = "";
-    musicBox.classList.remove("playing");
-  }
+  // Track-Text setzen
+  infoText.innerHTML = isPlaying
+    ? `Now playing: <strong>${trackName}</strong> by <strong>${artist}</strong>`
+    : `Last played: <strong>${trackName}</strong> by <strong>${artist}</strong>`;
+
+  // Albumcover setzen
+  cover.src = albumImg;
+
+  // Klasse für Visual-Effekt
+  musicBox.classList.toggle("playing", isPlaying);
 }
 
-// beim Laden
+// Laden und alle 15 Sekunden aktualisieren
 loadCurrentSong();
-
-// alle 15 Sekunden aktualisieren
 setInterval(loadCurrentSong, 15000);
