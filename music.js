@@ -1,5 +1,5 @@
-const apiKey = "DEIN_LASTFM_API_KEY";
-const username = "DEIN_LASTFM_USERNAME";
+const apiKey = "9433b9f2a8077343edb60cc12b908e52";
+const username = "BundleAxis";
 
 async function loadCurrentSong() {
   const url = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${username}&api_key=${apiKey}&format=json&limit=1&extended=1&format=json`;
